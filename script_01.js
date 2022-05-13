@@ -10,26 +10,28 @@
 // Funktionsrumpf (body) | callee
 function test()
 {
-    console.log ("Grizabella");
-}   
-
-/****** Funktionen 02a ******/
-// 2a. Parametriesierung + Datenübergabe von INNEN
-
-ausgabeNamen();
-
-function ausgabeNamen() {
-    let firstName = "Mariusz";
-    console.log("Hallo " + firstName + "!");
+    console.log("Grizabella");
 }
 
-// console.log(firstName);
+/***** Funktionen 02a *****/
+// 2a. Parametrisierung + Datenübergabe von INNEN
 
-/****** Funktionen 02b ******/
-// 2b. Parametriesierung + Datenübergabe von AUSSEN
+// ausgabeNamen();
 
-ausgabeNamen2();
+function ausgabeNamen() {
+    let firstName = "David"; 
+    console.log("Hallo " + firstName + "!"); 
+}
 
-function ausgabeNamen2(firstName) {
-    console.log("Hallo " + firstName + "!");
+// console.log(firstName); // .. stays in Vegas!
+
+/***** Funktionen 02b *****/
+// 2b. Parametrisierung + Datenübergabe von AUSSEN
+
+ausgabeNamen2("Bernhard");  // Args ..
+ausgabeNamen2("Mohanned");
+ausgabeNamen2("Bianca");
+
+function ausgabeNamen2(firstName) { // Parameter
+    console.log("Hallo " + firstName + "!"); 
 }
