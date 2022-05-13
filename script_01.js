@@ -32,9 +32,9 @@ function ausgabeNamen() {
 // ausgabeNamen2("Mohanned");
 // ausgabeNamen2("Bianca");
 
-function ausgabeNamen2(firstName) { // Parameter
-    console.log("Hallo " + firstName + "!"); 
-}
+// function ausgabeNamen2(firstName) { // Parameter
+//     console.log("Hallo " + firstName + "!"); 
+// }
 
 /******* Funktionen 02c *******/
 // 2c. Mehrere Parameter
@@ -42,16 +42,16 @@ function ausgabeNamen2(firstName) { // Parameter
 // ausgabeNamenParams("Maxine","Mützerich");
 // ausgabeNamenParams(prompt("Vorname?"),prompt("Nachname?"));
 
-function ausgabeNamenParams(firstName,familyName) {
-    console.log("Hallo " + firstName + " " + familyName + "!");
-    }
+// function ausgabeNamenParams(firstName,familyName) {
+//     console.log("Hallo " + firstName + " " + familyName + "!");
+    // }
 
     /*********Funktionen 03a *********/
     // 03a. Vorbereitung
     // Postulat: one funktion = one job (Uncle Bob)
     // SRP single responsibility principle 
 
-    ausgabeNamenParams("Maxine","Mützerich");
+    // ausgabeNamenParams("Maxine","Mützerich");
 
 function ausgabeNamenParams(firstName,familyName) {
     // 1 job: composing
@@ -60,7 +60,21 @@ function ausgabeNamenParams(firstName,familyName) {
         console.log(str);
   }
 
+  /*********** Funktionen 03b *********/
+  // Trennen der Funktionalitäten | return
 
+  output(getString("Maxine","Mützerich"));
+ // 1. Funktionalität: string composing
+function getString(firstName,familyName){
+    let str = "Hallo " + firstName + " " + familyName + "!";
+    return str;
+}
 
-
+  // 2. Funktionalität: data output
+// output("Test");
+  function output(outputData){
   
+}
+
+
+
